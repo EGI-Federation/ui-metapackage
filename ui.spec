@@ -37,8 +37,6 @@ Requires:       gfalFS
 Requires:	      gfal2-doc
 Requires:	      gfal2-devel
 Requires:	      ginfo
-Requires:       glite-ce-cream-cli  
-Requires:       glite-ce-cream-client-api-c
 Requires:	      glite-yaim-core
 Requires:	      glite-yaim-clients
 Requires:	      gsi-openssh-clients
