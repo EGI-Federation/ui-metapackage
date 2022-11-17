@@ -4,7 +4,7 @@ Suite of clients and APIs that users and applications can use to access
 [High Throughput Compute](https://docs.egi.eu/users/compute/high-throughput-compute/)
 services.
 
-The UI relies on packages available in the following repositories:
+The package relies on packages available in the following repositories:
 
 - [UMD](https://repository.egi.eu/)
 - [EPEL](https://docs.fedoraproject.org/en-US/epel/)
@@ -36,7 +36,7 @@ The RPM will be available into the `build/RPMS` directory.
 
 - Prepare a changelog from the last version, including contributors' names
 - Prepare a PR with
-  - Updating version and changelog in `ui-metapackage.spec`
+  - Updating version and changelog in `ui.spec`
   - Updating version and changelog in `CHANGELOG`
 - Once the PR has been merged, publish a new release using GitHub web interface
   - Suffix the tag name to be created with `v`, like `v1.0.0`
