@@ -9,6 +9,7 @@ BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 # the above replaced by ca-policy-egi-core
 Requires:       ca-policy-egi-core
 Requires:       aria2
+Requires:       condor
 Requires:	      davix-libs
 Requires:       dcache-srmclient
 Requires:       dcap
