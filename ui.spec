@@ -19,13 +19,6 @@ Requires: dcap-tunnel-gsi
 Requires: dcap-tunnel-krb
 Requires: dcap-tunnel-ssl
 Requires: dcap-tunnel-telnet
-Requires: dpm
-Requires: dpm-devel
-Requires: dpm-perl
-Requires: dpm-python
-Requires: lcgdm-devel
-Requires: libdpm.so.1()(64bit), dpm-libs
-Requires: liblcgdm.so.1()(64bit), lcgdm-libs
 Requires: fetch-crl
 Requires: fts-client
 Requires: fuse
@@ -46,11 +39,6 @@ Requires: lcg-ManageVOTag
 Requires: lcg-info
 Requires: lcg-infosites
 Requires: lcg-tags
-Requires: lfc
-Requires: liblfc.so.1()(64bit), lfc-libs
-Requires: lfc-devel
-Requires: lfc-perl
-Requires: lfc-python
 Requires: myproxy
 Requires: nordugrid-arc-client
 Requires: nordugrid-arc-plugins-xrootd
