@@ -1,71 +1,71 @@
-Name:		ui
-Version:	4.0.3
-Release:	1%{?dist}
-Summary:	UI meta-packages
-Group:		Applications/Internet
-License:	ASL 2.0
-BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
+Name: ui
+Version: 4.0.3
+Release: 1%{?dist}
+Summary: UI meta-packages
+Group: Applications/Internet
+License: ASL 2.0
+BuildRoot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 
 # the above replaced by ca-policy-egi-core
-Requires:       ca-policy-egi-core
-Requires:       aria2
-Requires:       condor
-Requires:	      davix-libs
-Requires:       dcache-srmclient
-Requires:       dcap
-Requires:	      dcap-devel
-Requires:	      dcap-libs 
-Requires:	      dcap-tunnel-gsi
-Requires:	      dcap-tunnel-krb  
-Requires:	      dcap-tunnel-ssl  
-Requires:	      dcap-tunnel-telnet
-Requires:       dpm
-Requires:       dpm-devel
-Requires:       dpm-perl
-Requires:       dpm-python
-Requires:       lcgdm-devel
-Requires:       libdpm.so.1()(64bit), dpm-libs
-Requires:       liblcgdm.so.1()(64bit), lcgdm-libs
-Requires:	      fetch-crl
-Requires:	      fts-client
-Requires:     	 fuse
-Requires:       fuse-libs
-Requires:       gfal2-all
-Requires:	      gfal2-plugin-xrootd
-Requires:       gfal2-python
-Requires:	      gfal2-util
-Requires:       gfalFS
-Requires:	      gfal2-doc
-Requires:	      gfal2-devel
-Requires:	      ginfo
-Requires:	      glite-yaim-core
-Requires:	      glite-yaim-clients
-Requires:	      gsi-openssh-clients
-Requires:	      globus-gsi-cert-utils-progs
-Requires:       lcg-ManageVOTag  
-Requires:       lcg-info  
-Requires:       lcg-infosites  
-Requires:       lcg-tags  
-Requires:       lfc
-Requires:       liblfc.so.1()(64bit), lfc-libs
-Requires:       lfc-devel
-Requires:       lfc-perl
-Requires:       lfc-python
-Requires:	      myproxy
-Requires:       nordugrid-arc-client
-Requires:       nordugrid-arc-plugins-xrootd
-Requires:       nordugrid-arc-plugins-gfal
-Requires:	      nordugrid-arc-plugins-globus
-Requires:	      nordugrid-arc-plugins-needed
-Requires:       openldap-clients
-Requires:       voms  
-Requires:       voms-clients-java  
-Requires:	      xrootd-client
+Requires: ca-policy-egi-core
+Requires: aria2
+Requires: condor
+Requires: davix-libs
+Requires: dcache-srmclient
+Requires: dcap
+Requires: dcap-devel
+Requires: dcap-libs
+Requires: dcap-tunnel-gsi
+Requires: dcap-tunnel-krb
+Requires: dcap-tunnel-ssl
+Requires: dcap-tunnel-telnet
+Requires: dpm
+Requires: dpm-devel
+Requires: dpm-perl
+Requires: dpm-python
+Requires: lcgdm-devel
+Requires: libdpm.so.1()(64bit), dpm-libs
+Requires: liblcgdm.so.1()(64bit), lcgdm-libs
+Requires: fetch-crl
+Requires: fts-client
+Requires: fuse
+Requires: fuse-libs
+Requires: gfal2-all
+Requires: gfal2-plugin-xrootd
+Requires: gfal2-python
+Requires: gfal2-util
+Requires: gfalFS
+Requires: gfal2-doc
+Requires: gfal2-devel
+Requires: ginfo
+Requires: glite-yaim-core
+Requires: glite-yaim-clients
+Requires: gsi-openssh-clients
+Requires: globus-gsi-cert-utils-progs
+Requires: lcg-ManageVOTag
+Requires: lcg-info
+Requires: lcg-infosites
+Requires: lcg-tags
+Requires: lfc
+Requires: liblfc.so.1()(64bit), lfc-libs
+Requires: lfc-devel
+Requires: lfc-perl
+Requires: lfc-python
+Requires: myproxy
+Requires: nordugrid-arc-client
+Requires: nordugrid-arc-plugins-xrootd
+Requires: nordugrid-arc-plugins-gfal
+Requires: nordugrid-arc-plugins-globus
+Requires: nordugrid-arc-plugins-needed
+Requires: openldap-clients
+Requires: voms
+Requires: voms-clients-java
+Requires: xrootd-client
 
-Source:		       ui-4.0.3.tar.gz
+Source: ui-4.0.3.tar.gz
 
 %description
-Suite of clients and APIs that users and applications 
+Suite of clients and APIs that users and applications
 can use to access grid services
 
 %prep
@@ -75,9 +75,9 @@ can use to access grid services
 
 %install
 rm -rf $RPM_BUILD_ROOT
- mkdir -p $RPM_BUILD_ROOT
- find $RPM_BUILD_ROOT -name '*.la' -exec rm -rf {} \;
- find $RPM_BUILD_ROOT -name '*.pc' -exec sed -i -e "s|$RPM_BUILD_ROOT||g" {} \;
+mkdir -p $RPM_BUILD_ROOT
+find $RPM_BUILD_ROOT -name '*.la' -exec rm -rf {} \;
+find $RPM_BUILD_ROOT -name '*.pc' -exec sed -i -e "s|$RPM_BUILD_ROOT||g" {} \;
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -97,7 +97,7 @@ rm -rf $RPM_BUILD_ROOT
 - added EL7 support
 * Sun Sep 07 2014 Cristina Aiftimiei <cristina.aiftimiei@pd.infn.it> - 3.1.0-1
 - added dependecies on gfal2-util and ginfo (IGIRTC-176)
-* Mon Sep 09 2013 Adrien Devresse <adevress at cern.ch> - 3.0.3-1 
+* Mon Sep 09 2013 Adrien Devresse <adevress at cern.ch> - 3.0.3-1
 - fix for lcgdm-devel 32 bits dependency problem on EL5
 * Sun Jul 28 2013 Cristina Aiftimiei <cristina.aiftimiei@pd.infn.it> - 3.0.2-1
 - added forgotten dependencies globus-gsi-cert-utils-progs (IGIRTC-156)
@@ -108,7 +108,7 @@ rm -rf $RPM_BUILD_ROOT
 * Sun Feb 03 2013 Cristina Aiftimiei <cristina.aiftimiei@pd.infn.it> - 3.0.0-0
 - updated deps according to DM Integration/Clients - add fts2-client
 - updated deps according the EMI3Arc - add *-xrootd, *-gfal
-- replaced all nordugrid-arc-* with nordugrid-arc-client-tools 
+- replaced all nordugrid-arc-* with nordugrid-arc-client-tools
 - removed nordugrid-arc-compat
 - updated deps according the EMI3VOMS - replace voms-clients with voms-clients3
 - added unicore-hila-emi-es, *-gridftp
