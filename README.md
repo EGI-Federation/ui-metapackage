@@ -20,9 +20,9 @@ The package relies on packages available in the following repositories:
 
 ## Installing and using the UI
 
-Once the UI will be installed, you will need to set it up so that you will be
-able to interact with the resources available to the
-[Virtual Organisations (VO)](https://operations-portal.egi.eu/vo/).
+Once the UI will be installed, you will need to set it up so to be able to
+interact with the resources available to a given
+[Virtual Organisation (VO)](https://ims.egi.eu/display/EGIG/Virtual+organisation).
 
 ### Deploying the UI
 

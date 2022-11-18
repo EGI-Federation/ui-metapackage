@@ -8,6 +8,9 @@
     },
     {
       "pattern": "^https://docs.github.com"
+    },
+    {
+      "pattern": "^https://voms2.hellasgrid.gr:8443/voms*"
     }
   ]
 }
