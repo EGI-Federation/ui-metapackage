@@ -21,13 +21,14 @@ The required build dependencies are:
 
 ```shell
 # Checkout tag to be packaged
-git clone https://github.com/EGI-Federation/ui-metapackage.git
-cd ui-metapackage
-git checkout X.X.X
+$ git clone https://github.com/EGI-Federation/ui-metapackage.git
+$ cd ui-metapackage
+$ git checkout X.X.X
 # Building in a container
-docker run --rm -v $(pwd):/source -it centos:7
-yum install -y rpm-build make rsync
-cd /source && make rpm
+$ docker run --rm -v $(pwd):/source -it quay.io/centos/centos:7
+[root@bc96d4c5a232 /]# yum install -y rpm-build make rsync rpmlint
+[root@bc96d4c5a232 /]# cd /source && make rpm
+[root@bc96d4c5a232 /]# rpmlint --file .rpmlint.ini build/RPMS/x86_64/*.rpm
 ```
 
 The RPM will be available into the `build/RPMS` directory.
