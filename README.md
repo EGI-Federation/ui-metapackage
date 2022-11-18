@@ -108,8 +108,8 @@ to export `X509_VOMSES` and `X509_VOMS_DIR` in your shell, as documented
 [on CERN's twiki](https://twiki.cern.ch/twiki/bin/view/DREAM/GridSetup):
 
 ```shell
-export X509_VOMSES=~/.glite/vomses
-export X509_VOMS_DIR=~/.glite/vomsdir
+$ export X509_VOMSES=~/.glite/vomses
+$ export X509_VOMS_DIR=~/.glite/vomsdir
 ```
 
 ### Setting up a UI using Ansible
