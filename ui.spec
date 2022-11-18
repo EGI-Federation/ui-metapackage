@@ -1,14 +1,14 @@
 %global debug_package %{nil}
 
-Name:		ui
-Version:	4.0.3
-Release:	1%{?dist}
-Summary:	User Interface meta-package
-Group:		Applications/Internet
-License:	ASL 2.0
-URL:	https://github.com/EGI-Federation/ui-metapackage
-Source:		%{name}-%{version}.tar.gz
-BuildRoot:	%{_tmppath}/%{name}-%{version}-build
+Name: ui
+Version: 4.0.3
+Release: 1%{?dist}
+Summary: User Interface meta-package
+Group: Applications/Internet
+License: ASL 2.0
+URL: https://github.com/EGI-Federation/ui-metapackage
+Source: %{name}-%{version}.tar.gz
+BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 # the above replaced by ca-policy-egi-core
 Requires: ca-policy-egi-core
