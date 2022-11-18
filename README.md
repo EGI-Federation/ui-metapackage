@@ -84,20 +84,26 @@ UI so that it can interact with the VOMS server for your VO.
 - Then looking at
   [dteam VOMS' Configuration page](https://voms2.hellasgrid.gr:8443/voms/dteam/configuration/configuration.action),
   you can create:
+
   - `/etc/vomsdir/<vo-name>/<voms-hostname>.lsc`, adjusting the file name
     according to the VO.
+
     - For `dteam`, the VOMS server is `voms2.hellasgrid.gr`, so the file would
       be named `/etc/grid-security/vomsdir/dteam/voms2.hellasgrid.gr.lsc` with
       the content for the **LSC configuration**.
+
       ```text
       /C=GR/O=HellasGrid/OU=hellasgrid.gr/CN=voms2.hellasgrid.gr
       /C=GR/O=HellasGrid/OU=Certification Authorities/CN=HellasGrid CA 2016
       ```
+
   - `/etc/vomses/<vo-name>-<voms-hosntame>` file, adjusting the file name
     according to the VO
+
     - For `dteam`, the VOMS server is `voms2.hellasgrid.gr`, so the file would
       be named `/etc/vomses/dteam-voms2.hellasgrid.gr` with the content of the
       **VOMSES string**.
+
       ```text
       "dteam" "voms2.hellasgrid.gr" "15004" "/C=GR/O=HellasGrid/OU=hellasgrid.gr/CN=voms2.hellasgrid.gr" "dteam"
       ```
