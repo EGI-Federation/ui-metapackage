@@ -1,4 +1,4 @@
-# User Interface (UI) metapackage
+# User Interface (UI) meta-package
 
 > In order to interact with
 > [High Throughput Compute (HTC)](https://docs.egi.eu/users/compute/high-throughput-compute/)
@@ -29,13 +29,13 @@ interact with the resources available to a given
 The UI is available as a package in the [UMD](https://go.egi.eu/umd) software
 distribution, but it will also require additional software and configuration.
 
-In order to help with deploying an UI, different solutions are possible:
+In order to help with deploying the UI, different solutions are possible:
 
-- Deploying an UI manually, using the packages available from
+- Deploying the UI manually, using the packages available from
   [UMD repositories](https://go.egi.eu/umd). You will need to install at least
   the `ui` meta-package, with `voms-client`, the
   [IGTF distribution](https://docs.egi.eu/providers/operations-manuals/howto01_using_igtf_ca_distribution/),
-  and configure the system to use voms-client.
+  and configure the system to interact with VOMS servers.
 - Some
   [Ansible roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
   are available in the
@@ -50,7 +50,7 @@ In order to help with deploying an UI, different solutions are possible:
   installed.
 - The repository
   [ui-deployment](https://github.com/EGI-Federation/ui-deployment) provides a
-  [terraform](https://terraform.io) based deployment allowing to deploy a
+  [terraform](https://terraform.io)-based deployment allowing to deploy a
   `User Interface (UI)` in a
   [Cloud Compute virtual machine](https://docs.egi.eu/users/compute/cloud-compute/).
   This integrated deployment is based on the Ansible modules, and should be
@@ -58,7 +58,7 @@ In order to help with deploying an UI, different solutions are possible:
 
 ### Manually configuring for a specific VO
 
-If you have installed the `ui` metapackage manually, from
+If you have installed the `ui` meta-package manually, from
 [UMD repository](https://repository.egi.eu/), you need to configure the support
 of the VO(s) you want to use on the UI.
 
@@ -69,7 +69,7 @@ of the VO(s) you want to use on the UI.
     [https://operations-portal.egi.eu/vo/view/voname/dteam](https://operations-portal.egi.eu/vo/view/voname/dteam).
 - Access the VO-specific VOMS server, the VOMS server should be the one
   mentioned in the `Registry Information` section of the VO ID card. For your
-  convenience, you should be able to use the link in the `Enrollment URL`.
+  convenience, you should be able to use the link in the `Enrolment URL`.
   - For `dteam` it's
     [https://voms2.hellasgrid.gr:8443/voms/dteam/](https://voms2.hellasgrid.gr:8443/voms/dteam/).
 - Once on the VOMS server, open the section `Configuration Info`.
@@ -166,5 +166,6 @@ The RPM will be available into the `build/RPMS` directory.
 
 ## History
 
-This work started under the EGEE project. This is now hosted here on GitHub, and
-maintained by the EGI Federation.
+This work started under the EGEE project. This is now hosted
+[on GitHub](https://github.com/EGI-Federation/ui-metapackage), and maintained by
+the [EGI](https://wwww.egi.eu) Federation.
