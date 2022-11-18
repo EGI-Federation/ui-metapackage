@@ -168,4 +168,4 @@ The RPM will be available into the `build/RPMS` directory.
 
 This work started under the EGEE project. This is now hosted
 [on GitHub](https://github.com/EGI-Federation/ui-metapackage), and maintained by
-the [EGI](https://wwww.egi.eu) Federation.
+the [EGI](https://www.egi.eu) Federation.
