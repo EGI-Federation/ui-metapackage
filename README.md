@@ -13,9 +13,12 @@ to access
 [High Throughput Compute](https://docs.egi.eu/users/compute/high-throughput-compute/)
 services.
 
+It will also install the
+[IGTF distribution](https://docs.egi.eu/providers/operations-manuals/howto01_using_igtf_ca_distribution/).
+
 The package relies on packages available in the following repositories:
 
-- [UMD](https://repository.egi.eu/)
+- [UMD](https://go.egi.eu/umd)
 - [EPEL](https://docs.fedoraproject.org/en-US/epel/)
 
 ## Installing and using the UI
@@ -32,10 +35,18 @@ distribution, but it will also require additional software and configuration.
 In order to help with deploying the UI, different solutions are possible:
 
 - Deploying the UI manually, using the packages available from
-  [UMD repositories](https://go.egi.eu/umd). You will need to install at least
-  the `ui` meta-package, the
-  [IGTF distribution](https://docs.egi.eu/providers/operations-manuals/howto01_using_igtf_ca_distribution/),
-  and configure the system to interact with VOMS servers.
+  [UMD repositories](https://go.egi.eu/umd). One the repositories are configured
+  by install the `umd-release` package, install the `ui` meta-package, and
+  configure the system to interact with the VOMS servers of the VO to be used.
+
+  ```shell
+  # Install EPEL repository
+  $ yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+  # Install UMD repositories, look for available UMD release on https://repository.egi.eu/
+  $ yum install -y http://repository.egi.eu/sw/production/umd/4/centos7/x86_64/updates/umd-release-4.1.3-1.el7.centos.noarch.rpm
+  $ yum localinstall -y ui-*.rpm
+  ```
+
 - Some
   [Ansible roles](https://docs.ansible.com/ansible/latest/user_guide/playbooks_reuse_roles.html)
   are available in the
