@@ -34,8 +34,6 @@ Requires: gfalFS
 Requires: gfal2-doc
 Requires: gfal2-devel
 Requires: ginfo
-Requires: glite-yaim-core
-Requires: glite-yaim-clients
 Requires: gsi-openssh-clients
 Requires: globus-gsi-cert-utils-progs
 Requires: lcg-ManageVOTag
