@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name: ui
-Version: 4.0.3
+Version: 5.0.0
 Release: 1%{?dist}
 Summary: User Interface meta-package
 Group: Applications/Internet
@@ -74,6 +74,8 @@ rm -rf %{buildroot}
 %doc /usr/share/doc/ui/README.md
 
 %changelog
+* Fri Nov 18 2022 Baptiste Grenier <baptiste.grenier@egi.eu> - 5.0.0-1
+- Drop support for RHEL6, CREAM, LFC, DPM, YAIM (#2) (Baptiste Grenier)
 * Fri Sep 15 2017 Andrea Manzi <andrea.manzi@cern.ch> - 4.0.3-1
 - package renamed to ui
 * Thu Apr 20 2017 Andrea Manzi <andrea.manzi@cern.ch> - 4.0.2-1
