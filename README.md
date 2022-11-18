@@ -33,7 +33,7 @@ In order to help with deploying the UI, different solutions are possible:
 
 - Deploying the UI manually, using the packages available from
   [UMD repositories](https://go.egi.eu/umd). You will need to install at least
-  the `ui` meta-package, with `voms-client`, the
+  the `ui` meta-package, the
   [IGTF distribution](https://docs.egi.eu/providers/operations-manuals/howto01_using_igtf_ca_distribution/),
   and configure the system to interact with VOMS servers.
 - Some
