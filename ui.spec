@@ -28,7 +28,6 @@ Requires: fts-client
 Requires: fuse
 Requires: fuse-libs
 Requires: gfal2-all
-Requires: gfal2-plugin-xrootd
 Requires: gfal2-python
 Requires: gfal2-util
 Requires: gfalFS
