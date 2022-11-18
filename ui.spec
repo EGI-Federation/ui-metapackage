@@ -1,10 +1,14 @@
-Name: ui
-Version: 4.0.3
-Release: 1%{?dist}
-Summary: UI meta-packages
-Group: Applications/Internet
-License: ASL 2.0
-BuildRoot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
+%global debug_package %{nil}
+
+Name:		ui
+Version:	4.0.3
+Release:	1%{?dist}
+Summary:	User Interface meta-package
+Group:		Applications/Internet
+License:	ASL 2.0
+URL:	https://github.com/EGI-Federation/ui-metapackage
+Source:		%{name}-%{version}.tar.gz
+BuildRoot:	%{_tmppath}/%{name}-%{version}-build
 
 # the above replaced by ca-policy-egi-core
 Requires: ca-policy-egi-core
@@ -50,28 +54,27 @@ Requires: voms
 Requires: voms-clients-java
 Requires: xrootd-client
 
-Source: ui-4.0.3.tar.gz
-
 %description
 Suite of clients and APIs that users and applications
 can use to access grid services
 
 %prep
 
+%setup -q
+
 %build
-# Nothing to do
+# Nothing to build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT
-find $RPM_BUILD_ROOT -name '*.la' -exec rm -rf {} \;
-find $RPM_BUILD_ROOT -name '*.pc' -exec sed -i -e "s|$RPM_BUILD_ROOT||g" {} \;
+rm -rf %{buildroot}
+make install prefix=%{buildroot}
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
+%doc /usr/share/doc/ui/README.md
 
 %changelog
 * Fri Sep 15 2017 Andrea Manzi <andrea.manzi@cern.ch> - 4.0.3-1
