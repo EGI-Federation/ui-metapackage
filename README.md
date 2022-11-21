@@ -35,7 +35,7 @@ distribution, but it will also require additional software and configuration.
 In order to help with deploying the UI, different solutions are possible:
 
 - Deploying the UI manually, using the packages available from
-  [UMD repositories](https://go.egi.eu/umd). One the repositories are configured
+  [UMD repositories](https://go.egi.eu/umd). Once the repositories are configured
   by install the `umd-release` package, install the `ui` meta-package, and
   configure the system to interact with the VOMS servers of the VO to be used.
 
