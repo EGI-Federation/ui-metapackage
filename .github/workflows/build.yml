@@ -75,7 +75,7 @@ jobs:
           name: rpms9
       - name: Install generated RPMs
         run: |
-          #FIXME remove external repo when UMD5 is available 
+          # FIXME: remove external repo when UMD5 is available 
           dnf install -y epel-release
           dnf install -y https://research.cs.wisc.edu/htcondor/repo/23.x/htcondor-release-current.el9.noarch.rpm
           dnf config-manager --add-repo  http://repository.egi.eu/sw/production/cas/1/current/repo-files/egi-trustanchors.repo
