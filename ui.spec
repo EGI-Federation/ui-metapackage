@@ -56,7 +56,6 @@ Requires: openldap-clients
 Requires: voms
 Requires: voms-clients-java
 Requires: xrootd-client
-Requires: libdb
 
 %description
 Suite of clients and APIs that users and applications
