@@ -37,7 +37,7 @@ jobs:
           fetch-depth: 0
       - name: Install build requisites
         run: |
-          yum install -y rpm-build rpmlint make rsync systemd-rpm-macros
+          dnf install -y rpm-build rpmlint make rsync systemd-rpm-macros
       - name: build rpm
         run: |
           make clean rpm
@@ -78,5 +78,6 @@ jobs:
         run: |
           dnf install -y epel-release
           dnf install -y https://research.cs.wisc.edu/htcondor/repo/23.x/htcondor-release-current.el9.noarch.rpm
+          dnf install -y https://repository.egi.eu/sw/production/cas/1/current/RPMS/ca-policy-egi-core-1.128-1.noarch.rpm
           dnf config-manager --set-enabled crb
           dnf localinstall -y ui-*.rpm
