@@ -80,7 +80,7 @@ rm -rf %{buildroot}
 %doc /usr/share/doc/ui/README.md
 
 %changelog
-* Tue Jun 04 <andrea.manzi@egi.eu> - 6.0.0-1
+* Tue Jun 04 2024 <andrea.manzi@egi.eu> - 6.0.0-1
 - Support for El9 
 * Fri Nov 18 2022 Baptiste Grenier <baptiste.grenier@egi.eu> - 5.0.0-1
 - Drop support for RHEL6, CREAM, LFC, DPM, YAIM (#2) (Baptiste Grenier)
