@@ -47,7 +47,7 @@ jobs:
         with:
           name: rpms9
           path: |
-            build/RPMS/noarch/ui-*.el9.noarch.rpm
+            build/RPMS/x86_64/ui-*.el9.x86_64.rpm
 
   centos7-install:
     name: Install CentOS 7 RPMs
@@ -79,4 +79,4 @@ jobs:
           dnf install -y epel-release
           dnf install -y https://research.cs.wisc.edu/htcondor/repo/23.x/htcondor-release-current.el9.noarch.rpm
           dnf config-manager --set-enabled crb
-          dnf localinstall -y ui-*.el9.noarch.rpm
+          dnf localinstall -y ui-*.rpm
