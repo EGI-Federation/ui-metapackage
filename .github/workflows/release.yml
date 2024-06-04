@@ -86,7 +86,7 @@ jobs:
     name: Upload AlmaLinux 9 release artefacts
     permissions:
       contents: write # to upload release asset (softprops/action-gh-release)
-    needs: build-almalinux9
+    needs: almalinux9
     runs-on: ubuntu-latest
     steps:
       - uses: actions/download-artifact@v3
