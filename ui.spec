@@ -81,7 +81,7 @@ rm -rf %{buildroot}
 
 %changelog
 * Tue Jun 04 2024 <andrea.manzi@egi.eu> - 6.0.0-1
-- Support for El9 
+- Support for El9 (#6 ) (Andrea Manzi)
 * Fri Nov 18 2022 Baptiste Grenier <baptiste.grenier@egi.eu> - 5.0.0-1
 - Drop support for RHEL6, CREAM, LFC, DPM, YAIM (#2) (Baptiste Grenier)
 * Fri Sep 15 2017 Andrea Manzi <andrea.manzi@cern.ch> - 4.0.3-1
