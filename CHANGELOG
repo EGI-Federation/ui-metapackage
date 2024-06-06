@@ -8,6 +8,9 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [6.0.1]
+- Included EGI Trustanchor repo (Andrea Manzi)
+
 ## [6.0.0]
 - Added support for el9 (#6) (Andrea Manzi)
  
