@@ -7,7 +7,8 @@ Summary: User Interface meta-package
 Group: Applications/Internet
 License: ASL 2.0
 URL: https://github.com/EGI-Federation/ui-metapackage
-Source: %{name}-%{version}.tar.gz
+Source0: %{name}-%{version}.tar.gz
+Source1: egi-trustanchors.repo
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
 # the above replaced by ca-policy-egi-core
@@ -64,6 +65,7 @@ can use to access grid services
 %prep
 
 %setup -q
+install -pm 644 %{SOURCE1} .
 
 %build
 # Nothing to build
@@ -71,6 +73,9 @@ can use to access grid services
 %install
 rm -rf %{buildroot}
 make install prefix=%{buildroot}
+install -dm 755 %{buildroot}%{_sysconfdir}/yum.repos.d
+install -pm 644 %{SOURCE1}   \
+    %{buildroot}%{_sysconfdir}/yum.repos.d
 
 %clean
 rm -rf %{buildroot}
@@ -78,6 +83,7 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root,-)
 %doc /usr/share/doc/ui/README.md
+%config(noreplace) /etc/yum.repos.d/egi-trustanchors.repo
 
 %changelog
 * Tue Jun 04 2024 <andrea.manzi@egi.eu> - 6.0.0-1

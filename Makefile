@@ -29,6 +29,7 @@ prepare: dist
 	@mkdir -p  $(build)/BUILD/
 	cp $(build)/$(NAME)-$(VERSION).tar.gz $(build)/SOURCES
 	cp $(NAME).spec $(build)/SPECS
+	cp *.repo $(build)/SOURCES
 
 srpm: prepare
 	rpmbuild -bs --define="dist ${dist}" --define='_topdir ${build}' $(build)/SPECS/$(NAME).spec
