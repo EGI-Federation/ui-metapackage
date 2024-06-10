@@ -78,6 +78,6 @@ jobs:
           dnf install -y epel-release
           dnf config-manager --add-repo http://repository.egi.eu/sw/production/cas/1/current/repo-files/egi-trustanchors.repo
           # FIXME: Replace WLCG repo by UMD5 once available
-          dnf config-manager --add-repo https://linuxsoft.cern.ch/wlcg/wlcg-el9.repo
+          dnf install -y https://linuxsoft.cern.ch/wlcg/el9/x86_64/wlcg-repo-1.0.0-1.el9.noarch.rpm
           dnf config-manager --set-enabled crb
           dnf localinstall -y ui-*.rpm
