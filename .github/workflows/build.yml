@@ -86,5 +86,6 @@ jobs:
           dnf config-manager --add-repo http://repository.egi.eu/sw/production/cas/1/current/repo-files/egi-trustanchors.repo
           # FIXME: Replace WLCG repo by UMD5 once available
           dnf install -y https://linuxsoft.cern.ch/wlcg/el${{ matrix.almalinux-version }}/x86_64/wlcg-repo-1.0.0-1.el${{ matrix.almalinux-version }}.noarch.rpm
+          dnf install -y https://research.cs.wisc.edu/htcondor/repo/23.x/htcondor-release-current.el${{ matrix.almalinux-version }}.noarch.rpm
           dnf config-manager --set-enabled crb
           dnf localinstall -y ui-*.rpm
