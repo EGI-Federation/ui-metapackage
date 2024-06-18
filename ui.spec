@@ -10,9 +10,9 @@ URL: https://github.com/EGI-Federation/ui-metapackage
 Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
-# the above replaced by ca-policy-egi-core
 Requires: ca-policy-egi-core
 Requires: aria2
+Requires: cvmfs
 Requires: davix-libs
 Requires: fetch-crl
 Requires: condor
