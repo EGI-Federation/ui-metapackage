@@ -82,7 +82,7 @@ rm -rf %{buildroot}
 %doc /usr/share/doc/ui/README.md
 
 %changelog
-* Mon aUg 19 2024 <baptiste.grenier@egi.eu> - 7.0.0-1
+* Mon Aug 19 2024 <baptiste.grenier@egi.eu> - 7.0.0-1
 - Update GFAL package name (#13) (Andrey Kiryanov)
 - Stop building and releasing for RHEL7 (#14) (Baptiste Grenier)
 * Tue Jun 18 2024 <baptiste.grenier@egi.eu> - 6.2.0-1
