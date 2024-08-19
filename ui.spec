@@ -83,7 +83,7 @@ rm -rf %{buildroot}
 
 %changelog
 * Mon aUg 19 2024 <baptiste.grenier@egi.eu> - 7.0.0-1
-- Update GFAL pacakge name (#13) (Andrey Kiryanov)
+- Update GFAL package name (#13) (Andrey Kiryanov)
 - Stop building and releasing for RHEL7 (#14) (Baptiste Grenier)
 * Tue Jun 18 2024 <baptiste.grenier@egi.eu> - 6.2.0-1
 - Include CVMFS as a dependency (#12) (Baptiste Grenier)
