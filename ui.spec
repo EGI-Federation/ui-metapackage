@@ -10,6 +10,7 @@ URL: https://github.com/EGI-Federation/ui-metapackage
 Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 
+
 Requires: ca-policy-egi-core
 Requires: aria2
 Requires: cvmfs
@@ -74,8 +75,10 @@ can use to access grid services
 rm -rf %{buildroot}
 make install prefix=%{buildroot}
 
-%clean
-rm -rf %{buildroot}
+# bruce.becker@egi.eu Removed clean section 2026-03-04
+# Obsolete
+# %clean
+# rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
