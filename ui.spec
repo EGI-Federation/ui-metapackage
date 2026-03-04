@@ -1,20 +1,21 @@
 %global debug_package %{nil}
 
 Name: ui
-Version: 7.0.0
+Version: 7.1.0
 Release: 1%{?dist}
 Summary: User Interface meta-package
 Group: Applications/Internet
-License: ASL 2.0
+License: Apache-2.0
 URL: https://github.com/EGI-Federation/ui-metapackage
 Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
-
+BuildArch: noarch
+Packager: Bruce Becker <bruce.becker@egi.eu>.
 
 Requires: ca-policy-egi-core
 Requires: aria2
 Requires: cvmfs
-Requires: davix-libs
+# Requires: davix-libs
 Requires: fetch-crl
 Requires: condor
 %if 0%{?rhel} == 7
@@ -26,14 +27,14 @@ Requires: lcg-tags
 Requires: fts-client
 %endif
 Requires: dcap
-Requires: dcap-devel
-Requires: dcap-libs
+# Requires: dcap-devel
+# Requires: dcap-libs
 Requires: dcap-tunnel-gsi
 Requires: dcap-tunnel-krb
 Requires: dcap-tunnel-ssl
 Requires: dcap-tunnel-telnet
 Requires: fuse
-Requires: fuse-libs
+# Requires: fuse-libs
 Requires: gfal2-all
 %if 0%{?rhel} == 7
 Requires: gfal2-python
@@ -43,7 +44,7 @@ Requires: python3-gfal2
 Requires: python3-gfal2-util
 %endif
 Requires: gfal2-doc
-Requires: gfal2-devel
+# Requires: gfal2-devel
 Requires: ginfo
 Requires: gsi-openssh-clients
 Requires: globus-gsi-cert-utils-progs
@@ -85,6 +86,9 @@ make install prefix=%{buildroot}
 %doc /usr/share/doc/ui/README.md
 
 %changelog
+* Wed Mar 04 2026 <bruce.becker@egi.eu> - 7.1.0-1
+- Remove explicit dependecies on libraries and devel files
+- Add maintainer
 * Mon Aug 19 2024 <baptiste.grenier@egi.eu> - 7.0.0-1
 - Update GFAL package name (#13) (Andrey Kiryanov)
 - Stop building and releasing for RHEL7 (#14) (Baptiste Grenier)
