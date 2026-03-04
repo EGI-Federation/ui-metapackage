@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
       - name: Install build requisites
         run: |
-          dnf install almalinux-release-devel
+          dnf install -y almalinux-release-devel
           dnf install -y rpm-build rpmlint make rsync systemd-rpm-macros
       - name: build rpm
         run: |
