@@ -1,0 +1,5 @@
+Filters = [
+    "ui.* no-binary",
+    "ui.* explicit-lib-dependency",
+    "ui.* devel-dependency",
+]
