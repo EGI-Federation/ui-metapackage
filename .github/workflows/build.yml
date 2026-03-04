@@ -9,7 +9,7 @@ jobs:
   build-almalinux:
     strategy:
       matrix:
-        almalinux-version: [8, 9]
+        almalinux-version: [8, 9, 10]
     name: Build AlmaLinux ${{ matrix.almalinux-version }} RPMs
     runs-on: ubuntu-latest
     container: almalinux:${{ matrix.almalinux-version }}
