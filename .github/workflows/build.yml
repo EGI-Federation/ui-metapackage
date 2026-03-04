@@ -51,7 +51,8 @@ jobs:
           dnf install -y https://research.cs.wisc.edu/htcondor/repo/23.x/htcondor-release-current.el8.noarch.rpm
           dnf install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
           dnf config-manager --set-enabled powertools
-          dnf localinstall -y ui-*.rpm
+          ls -lht
+          dnf localinstall -y build/RPMS/*/ui-*.rpm
 
   install-almalinux9:
     name: Install AlmaLinux 9 RPMs
