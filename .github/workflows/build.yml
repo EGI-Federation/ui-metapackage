@@ -88,7 +88,7 @@ jobs:
           dnf config-manager --add-repo http://repository.egi.eu/sw/production/cas/1/current/repo-files/egi-trustanchors.repo
           # FIXME: Remove htcondor and replace WLCG repo by UMD5 once available
           dnf install -y https://linuxsoft.cern.ch/wlcg/el10/x86_64/wlcg-repo-2.0.0-1.el10.noarch.rpm
-          dnf install -y https://research.cs.wisc.edu/htcondor/repo/25.x/htcondor-release-current.el10.noarch.rpm
+          ddnf install -y https://research.cs.wisc.edu/htcondor/repo/25.0/htcondor-release-current.el10.noarch.rpm
           dnf install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
           dnf config-manager --set-enabled crb
           dnf localinstall -y x86_64/ui-*.rpm
