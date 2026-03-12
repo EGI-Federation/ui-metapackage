@@ -9,7 +9,6 @@ License: Apache-2.0
 URL: https://github.com/EGI-Federation/ui-metapackage
 Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
-BuildArch: noarch
 Packager: Bruce Becker <bruce.becker@egi.eu>.
 
 Requires: ca-policy-egi-core
