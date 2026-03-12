@@ -52,7 +52,7 @@ jobs:
           dnf install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
           dnf config-manager --set-enabled powertools
           ls -lht
-          dnf localinstall -y noarch/ui-*.rpm
+          dnf localinstall -y ui-*.rpm
 
   install-almalinux9:
     name: Install AlmaLinux 9 RPMs
@@ -72,7 +72,7 @@ jobs:
           dnf install -y https://research.cs.wisc.edu/htcondor/repo/23.x/htcondor-release-current.el9.noarch.rpm
           dnf install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
           dnf config-manager --set-enabled crb
-          dnf localinstall -y noarch/ui-*.rpm
+          dnf localinstall -y ui-*.rpm
   install-almalinux10:
     name: Install AlmaLinux 10 RPMs
     needs: build-almalinux
@@ -91,4 +91,4 @@ jobs:
           dnf install -y https://research.cs.wisc.edu/htcondor/repo/25.x/htcondor-release-current.el10.noarch.rpm
           dnf install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm
           dnf config-manager --set-enabled crb
-          dnf localinstall -y noarch/ui-*.rpm
+          dnf localinstall -y ui-*.rpm
