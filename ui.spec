@@ -15,7 +15,6 @@ Packager: Bruce Becker <bruce.becker@egi.eu>.
 Requires: ca-policy-egi-core
 Requires: aria2
 Requires: cvmfs
-# Requires: davix-libs
 Requires: fetch-crl
 Requires: condor
 %if 0%{?rhel} == 7
@@ -27,14 +26,11 @@ Requires: lcg-tags
 Requires: fts-client
 %endif
 Requires: dcap
-# Requires: dcap-devel
-# Requires: dcap-libs
 Requires: dcap-tunnel-gsi
 Requires: dcap-tunnel-krb
 Requires: dcap-tunnel-ssl
 Requires: dcap-tunnel-telnet
 Requires: fuse
-# Requires: fuse-libs
 Requires: gfal2-all
 %if 0%{?rhel} == 7
 Requires: gfal2-python
@@ -44,18 +40,24 @@ Requires: python3-gfal2
 Requires: python3-gfal2-util
 %endif
 Requires: gfal2-doc
-# Requires: gfal2-devel
 Requires: ginfo
 Requires: gsi-openssh-clients
 Requires: globus-gsi-cert-utils-progs
 Requires: lcg-infosites
 Requires: myproxy
+%if 0%{?rhel} < 10
+Requires: dcap-devel
+Requires: dcap-libs
+Requires: gfal2-devel
+Requires: fuse-libs
 Requires: nordugrid-arc-client
 Requires: nordugrid-arc-plugins-xrootd
 Requires: nordugrid-arc-plugins-gfal
 Requires: nordugrid-arc-plugins-globus
 Requires: nordugrid-arc-plugins-needed
 Requires: nordugrid-arc-plugins-arcrest
+Requires: davix-libs
+%endif
 Requires: openldap-clients
 Requires: voms
 Requires: voms-clients-java
