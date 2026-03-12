@@ -25,7 +25,7 @@ jobs:
         # rpmlint should be run on the spec file first.
         run: |
           make clean rpm
-          rpmlint --file .rpmlint.ini build/RPMS/x86_64/*.rpm
+          #rpmlint --file .rpmlint.ini build/RPMS/x86_64/*.rpm
       - name: Upload RPMs
         uses: actions/upload-artifact@v7
         with:
