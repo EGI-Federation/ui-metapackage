@@ -1,19 +1,25 @@
 %global debug_package %{nil}
 
 Name: ui
-Version: 7.0.0
+Version: 7.1.0
 Release: 1%{?dist}
 Summary: User Interface meta-package
 Group: Applications/Internet
-License: ASL 2.0
+License: Apache-2.0
 URL: https://github.com/EGI-Federation/ui-metapackage
 Source: %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
+BuildArch: noarch
+Packager: Bruce Becker <bruce.becker@egi.eu>.
 
 Requires: ca-policy-egi-core
 Requires: aria2
 Requires: cvmfs
 Requires: davix-libs
+Requires: dcap-devel
+Requires: dcap-libs
+Requires: gfal2-devel
+Requires: fuse-libs
 Requires: fetch-crl
 Requires: condor
 %if 0%{?rhel} == 7
@@ -25,14 +31,11 @@ Requires: lcg-tags
 Requires: fts-client
 %endif
 Requires: dcap
-Requires: dcap-devel
-Requires: dcap-libs
 Requires: dcap-tunnel-gsi
 Requires: dcap-tunnel-krb
 Requires: dcap-tunnel-ssl
 Requires: dcap-tunnel-telnet
 Requires: fuse
-Requires: fuse-libs
 Requires: gfal2-all
 %if 0%{?rhel} == 7
 Requires: gfal2-python
@@ -42,18 +45,20 @@ Requires: python3-gfal2
 Requires: python3-gfal2-util
 %endif
 Requires: gfal2-doc
-Requires: gfal2-devel
-Requires: ginfo
 Requires: gsi-openssh-clients
 Requires: globus-gsi-cert-utils-progs
-Requires: lcg-infosites
+
 Requires: myproxy
+%if 0%{?rhel} < 10
+Requires: ginfo
+Requires: lcg-infosites
 Requires: nordugrid-arc-client
 Requires: nordugrid-arc-plugins-xrootd
 Requires: nordugrid-arc-plugins-gfal
 Requires: nordugrid-arc-plugins-globus
 Requires: nordugrid-arc-plugins-needed
 Requires: nordugrid-arc-plugins-arcrest
+%endif
 Requires: openldap-clients
 Requires: voms
 Requires: voms-clients-java
@@ -74,14 +79,19 @@ can use to access grid services
 rm -rf %{buildroot}
 make install prefix=%{buildroot}
 
-%clean
-rm -rf %{buildroot}
+# bruce.becker@egi.eu Removed clean section 2026-03-04
+# Obsolete
+# %clean
+# rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root,-)
 %doc /usr/share/doc/ui/README.md
 
 %changelog
+* Wed Mar 04 2026 <bruce.becker@egi.eu> - 7.1.0-1
+- Remove explicit dependecies on libraries and devel files
+- Add maintainer
 * Mon Aug 19 2024 <baptiste.grenier@egi.eu> - 7.0.0-1
 - Update GFAL package name (#13) (Andrey Kiryanov)
 - Stop building and releasing for RHEL7 (#14) (Baptiste Grenier)

@@ -1,1 +1,4 @@
+# Ignore build artifacts
 build/
+# Ignore pre-commit cached reports
+megalinter-reports/
