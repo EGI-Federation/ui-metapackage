@@ -128,7 +128,6 @@ jobs:
           files: |
             ${{ steps.package_name_almalinux9.outputs.rpm_path }}
             ${{ steps.package_name_almalinux9.outputs.src_path }}
-            
   release10:
     name: Upload AlmaLinux 10 release artefacts
     permissions:
