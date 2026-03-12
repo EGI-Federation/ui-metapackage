@@ -15,6 +15,11 @@ Packager: Bruce Becker <bruce.becker@egi.eu>.
 Requires: ca-policy-egi-core
 Requires: aria2
 Requires: cvmfs
+Requires: davix-libs
+Requires: dcap-devel
+Requires: dcap-libs
+Requires: gfal2-devel
+Requires: fuse-libs
 Requires: fetch-crl
 Requires: condor
 %if 0%{?rhel} == 7
@@ -40,23 +45,19 @@ Requires: python3-gfal2
 Requires: python3-gfal2-util
 %endif
 Requires: gfal2-doc
-Requires: ginfo
 Requires: gsi-openssh-clients
 Requires: globus-gsi-cert-utils-progs
-Requires: lcg-infosites
+
 Requires: myproxy
 %if 0%{?rhel} < 10
-Requires: dcap-devel
-Requires: dcap-libs
-Requires: gfal2-devel
-Requires: fuse-libs
+Requires: ginfo
+Requires: lcg-infosites
 Requires: nordugrid-arc-client
 Requires: nordugrid-arc-plugins-xrootd
 Requires: nordugrid-arc-plugins-gfal
 Requires: nordugrid-arc-plugins-globus
 Requires: nordugrid-arc-plugins-needed
 Requires: nordugrid-arc-plugins-arcrest
-Requires: davix-libs
 %endif
 Requires: openldap-clients
 Requires: voms
