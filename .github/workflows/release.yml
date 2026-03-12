@@ -53,8 +53,7 @@ jobs:
           path: |
             build/RPMS/x86_64/ui-*.el9.x86_64.rpm
             build/SRPMS/ui-*.el9.src.rpm
-
-   almalinux10:
+  almalinux10:
     name: Build AlmaLinux 10 RPMs
     runs-on: ubuntu-latest
     container: almalinux:10
