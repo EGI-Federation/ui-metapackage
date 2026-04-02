@@ -34,15 +34,23 @@ Requires: gfal2-doc
 Requires: gsi-openssh-clients
 Requires: globus-gsi-cert-utils-progs
 Requires: myproxy
+
+%if 0%{?rhel} < 10
 Requires: nordugrid-arc-client
 Requires: nordugrid-arc-plugins-xrootd
 Requires: nordugrid-arc-plugins-gfal
 Requires: nordugrid-arc-plugins-globus
 Requires: nordugrid-arc-plugins-needed
 Requires: nordugrid-arc-plugins-arcrest
-%if 0%{?rhel} < 10
 Requires: ginfo
 Requires: lcg-infosites
+%else
+Requires: nordugrid-arc7-client
+Requires: nordugrid-arc7-plugins-xrootd
+Requires: nordugrid-arc7-plugins-gfal
+Requires: nordugrid-arc7-plugins-globus
+Requires: nordugrid-arc7-plugins-needed
+Requires: nordugrid-arc7-plugins-arcrest
 %endif
 Requires: openldap-clients
 Requires: voms
