@@ -1,7 +1,7 @@
 %global debug_package %{nil}
 
 Name: ui
-Version: 7.1.0
+Version: 7.2.0
 Release: 1%{?dist}
 Summary: User Interface meta-package
 Group: Applications/Internet
@@ -21,14 +21,6 @@ Requires: gfal2-devel
 Requires: fuse-libs
 Requires: fetch-crl
 Requires: condor
-%if 0%{?rhel} == 7
-Requires: gfalFS
-Requires: dcache-srmclient
-Requires: lcg-ManageVOTag
-Requires: lcg-info
-Requires: lcg-tags
-Requires: fts-client
-%endif
 Requires: dcap
 Requires: dcap-tunnel-gsi
 Requires: dcap-tunnel-krb
@@ -36,27 +28,21 @@ Requires: dcap-tunnel-ssl
 Requires: dcap-tunnel-telnet
 Requires: fuse
 Requires: gfal2-all
-%if 0%{?rhel} == 7
-Requires: gfal2-python
-Requires: gfal2-util
-%else
 Requires: python3-gfal2
 Requires: python3-gfal2-util
-%endif
 Requires: gfal2-doc
 Requires: gsi-openssh-clients
 Requires: globus-gsi-cert-utils-progs
-
 Requires: myproxy
-%if 0%{?rhel} < 10
-Requires: ginfo
-Requires: lcg-infosites
 Requires: nordugrid-arc-client
 Requires: nordugrid-arc-plugins-xrootd
 Requires: nordugrid-arc-plugins-gfal
 Requires: nordugrid-arc-plugins-globus
 Requires: nordugrid-arc-plugins-needed
 Requires: nordugrid-arc-plugins-arcrest
+%if 0%{?rhel} < 10
+Requires: ginfo
+Requires: lcg-infosites
 %endif
 Requires: openldap-clients
 Requires: voms
@@ -88,6 +74,9 @@ make install prefix=%{buildroot}
 %doc /usr/share/doc/ui/README.md
 
 %changelog
+* Thu Apr 02 2026 <ndrea.manzi@egi.eu> - 7.2.0-1
+- Remove EL7 deps
+- Add nordugrid packages 
 * Wed Mar 04 2026 <bruce.becker@egi.eu> - 7.1.0-1
 - Remove explicit dependecies on libraries and devel files
 - Add maintainer
